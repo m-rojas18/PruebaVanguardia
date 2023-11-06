@@ -1,6 +1,13 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const app = express()
 const port = 3000
+
+require('dotenv').config()
+
+
+//app.use(express.json())
+mongoose.connect(process.env.MONGODB_URI).then(()=> console.log('Conexion exitosa a MongoDB')).catch((error) => console.error(error))
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
