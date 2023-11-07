@@ -1,9 +1,10 @@
-import { Router } from "express";
-import { newStudent, deleteStudent } from "../controllers/StudentController";
+const express = require("express")
+const { newStudent } = require("../controllers/students.controller")
 
-const router = Router()
+const router = express.Router()
 
-router.post('/createStudent', newStudent)
-router.delete('/deleteStudent', deleteStudent)
+//Ruta crear usuario
+router.post('/crear-estudiante', newStudent);
 
-export default router
+
+module.exports = router;

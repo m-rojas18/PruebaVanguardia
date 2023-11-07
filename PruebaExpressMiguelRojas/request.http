@@ -1,0 +1,10 @@
+###
+POST http://localhost:3000/crear-estudiante HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Miguel Rojas",
+    "age": 18,
+    "email": "m_rojas18@unitec.edu",
+    "isActive": true
+}
